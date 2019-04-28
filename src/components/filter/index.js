@@ -1,5 +1,5 @@
 import { Wrapper, Container } from '../../utils/class';
-import Filters from '../../api/filters';
+import FiltersList from '../../api/filters';
 import {
     Title, BoxOptions, Option
 } from './styled';
@@ -10,7 +10,7 @@ const Filter = () => (
             <Title>Filtre por categorias:</Title>
             <BoxOptions>
                 {
-                    Filters.map( ( option, key ) => {
+                    FiltersList.map( ( option, key ) => {
                         return (
                             <Option key={key}>{option.name}</Option>
                         )

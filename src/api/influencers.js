@@ -1,4 +1,20 @@
-const Influencers = [
+const InfluencersList = [
+    {
+        "name": "Reinaldo Amorim",
+        "id": "@Juuhz.Amorim",
+        "image": "https://instagram.fsdu5-1.fna.fbcdn.net/vp/6539022c2b11477ffd4983c1407a7087/5D6ED2C3/t51.2885-19/s320x320/14374165_1776064152608675_7812323289816104960_a.jpg?_nc_ht=instagram.fsdu5-1.fna.fbcdn.net",
+        "category": "Tecnologia",
+        "followers": 229,
+        "follow": 243,
+        "email": "juuhz.easy@gmail.com",
+        "phone": "(21) 96556-9785",
+        "stars": 4.5,
+        "real_followers": 93.80,
+        "like_exp": 36,
+        "like_avg": 45,
+        "comments_exp": 12,
+        "comments_avg": 20
+    },
     {
         "name": "Reinaldo Amorim",
         "id": "@Juuhz.Amorim",
@@ -177,4 +193,4 @@ const Influencers = [
     }
 ]
 
-export default Influencers;
+export default InfluencersList;

@@ -1,4 +1,4 @@
-const Filters = [
+const FiltersList = [
     {
         "name": "Beleza",
         'slug': "beleza"
@@ -45,4 +45,4 @@ const Filters = [
     }
 ]
 
-export default Filters;
+export default FiltersList;

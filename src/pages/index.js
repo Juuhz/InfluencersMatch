@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import Page from '../components/page';
 import Header from '../components/header';
 import Filter from '../components/filter';
+import Influencers from '../components/influencers'; 
 
 class Home extends Component{
   render(){
@@ -11,6 +12,7 @@ class Home extends Component{
       <Page>
         <Header />
         <Filter />
+        <Influencers />
       </Page>
     )
   }
