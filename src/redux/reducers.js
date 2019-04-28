@@ -15,6 +15,16 @@ export const reducer = (state = initialState, action) => {
       return Object.assign({}, state, {
         categoryActive: action.category,
       })
+      case actionTypes.SET_INFLUENCER:
+      return Object.assign({}, state, {
+        modalInfluencer: action.modalInfluencer,
+        modalStatus: true
+      })
+    case actionTypes.CLOSE_MODAL:
+      return Object.assign({}, state, {
+        modalInfluencer: false,
+        modalStatus: false
+      })
     default:
       return state
   }

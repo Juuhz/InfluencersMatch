@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+// Import Redux
+import { connect } from 'react-redux';
 
 // Import Components
 import Page from '../components/page';
@@ -6,18 +7,24 @@ import Header from '../components/header';
 import Filter from '../components/filter';
 import Influencers from '../components/influencers'; 
 import Footer from '../components/footer'; 
+import Modal from '../components/modal'; 
 
-class Home extends Component{
-  render(){
-    return (
-      <Page>
-        <Header />
-        <Filter />
-        <Influencers />
-        <Footer />
-      </Page>
-    )
-  }
+const Home = ({ modalStatus, modalInfluencer }) => (
+  <Page>
+    <Header />
+    <Filter />
+    <Influencers />
+    <Footer />
+    {
+      modalStatus &&
+        <Modal />
+    }
+  </Page>
+);
+
+function mapStateToProps (state) {
+  const { modalStatus, modalInfluencer } = state
+  return { modalStatus, modalInfluencer }
 }
 
-export default Home;
+export default connect(mapStateToProps)(Home)

@@ -3,7 +3,7 @@ import { Wrapper, Container } from '../../utils/class';
 
 // Import Style
 import {
-    Section, Copy
+    Copy
 } from './styled';
 
 const Footer = () => (
