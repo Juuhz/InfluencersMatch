@@ -1,47 +1,51 @@
 const FiltersList = [
     {
+        "name": "Todas",
+        "value": false
+    },
+    {
         "name": "Beleza",
-        'slug': "beleza"
+        "value": "Beleza"
     },
     {
         "name": "Life Style",
-        'slug': "life-style"
+        "value": "Life Style"
     },
     {
         "name": "Gastronomia",
-        'slug': "gastronomia"
+        "value": "Gastronomia"
     },
     {
         "name": "Esportes",
-        'slug': "esportes"
+        "value": "Esportes"
     },
     {
         "name": "Cultura",
-        'slug': "cultura"
+        "value": "Cultura"
     },
     {
         "name": "Moda",
-        'slug': "moda"
+        "value": "Moda"
     },
     {
         "name": "Viagem",
-        'slug': "viagem"
+        "value": "Viagem"
     },
     {
         "name": "Gamer",
-        'slug': "gamer"
+        "value": "Gamer"
     },
     {
         "name": "Bem Estar",
-        'slug': "bem-estar"
+        "value": "Bem Estar"
     },
     {
         "name": "Arte",
-        'slug': "arte"
+        "value": "Arte"
     },
     {
         "name": "Outros",
-        'slug': "outros"
+        "value": "Outros"
     }
 ]
 

@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+/* HTML */
+html {
+    scroll-behavior: smooth;
+}
+
 /* BODY */
 body{
     overflow-x: hidden;

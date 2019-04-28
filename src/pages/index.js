@@ -5,6 +5,7 @@ import Page from '../components/page';
 import Header from '../components/header';
 import Filter from '../components/filter';
 import Influencers from '../components/influencers'; 
+import Footer from '../components/footer'; 
 
 class Home extends Component{
   render(){
@@ -13,6 +14,7 @@ class Home extends Component{
         <Header />
         <Filter />
         <Influencers />
+        <Footer />
       </Page>
     )
   }
