@@ -13,7 +13,7 @@ import ReactStars from 'react-stars';
 import {
     ModalWrapper, ModalContent, CloseModal,
     Thumbinial, Infos, Name, Stars, InfoStar,
-    InstaStats, ItemStats, Label, Value
+    InstaStats, ItemStats, Label, Value, ButtonContact
 } from './styled';
 
 class Modal extends Component {
@@ -46,7 +46,7 @@ class Modal extends Component {
                         </Stars>
                         <InstaStats>
                             <ItemStats>
-                                <Label>Segmuinto:</Label>
+                                <Label>Segmento:</Label>
                                 <Value>{influence.category}</Value>
                             </ItemStats>
                             <ItemStats>
@@ -67,6 +67,7 @@ class Modal extends Component {
                             </ItemStats>
                         </InstaStats>
                     </Infos>
+                    <ButtonContact>Visualizar contatos</ButtonContact>
                 </ModalContent>
             </ModalWrapper>
         );

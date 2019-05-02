@@ -24,7 +24,7 @@ export const Influence = styled.div`
 `;
 
 export const Thumbnial = styled.img`
-    max-width: 100%;
+    width: 100%;
     display: block;
 `;
 

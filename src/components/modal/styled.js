@@ -84,3 +84,8 @@ export const Label = styled.div`
 export const Value = styled.div`
     opacity: 0.65;
 `;
+
+export const ButtonContact = styled.a`
+    
+`;
+

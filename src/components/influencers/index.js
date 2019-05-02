@@ -6,6 +6,7 @@ import { bindActionCreators } from 'redux';
 // Import Utils
 import ReactStars from 'react-stars';
 import { Wrapper, Container } from '../../utils/class';
+import { shuffle } from '../../utils/helpers';
 import InfluencersList from '../../api/influencers';
 
 // Import Actions Redux
@@ -27,6 +28,7 @@ class Influencers extends Component {
 
     render() {
         const { categoryActive } = this.props;
+        //shuffle( InfluencersList );
 
         return (
             <Wrapper id="influencers">
