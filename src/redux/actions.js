@@ -3,6 +3,7 @@ export const actionTypes = {
     SET_CATEGORY: 'SET_CATEGORY',
     SET_INFLUENCER: 'SET_INFLUENCER',
     CLOSE_MODAL: 'CLOSE_MODAL',
+    MESSAGE_MODAL: 'MESSAGE_MODAL',
 }
 
 // Action que seta a categoria no filtro
@@ -18,4 +19,9 @@ export const setInfluencerModal = ( incluencer ) => {
 // Action que fecha o Modal
 export const closeModal = () => {
     return { type: actionTypes.CLOSE_MODAL }
+}
+
+// Action que exibe a mensagem no modal
+export const showContactModal = () => {
+    return { type: actionTypes.MESSAGE_MODAL }
 }

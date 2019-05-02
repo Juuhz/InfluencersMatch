@@ -2,5 +2,6 @@
 export const initialState = {
     categoryActive: false,
     modalStatus: false,
-    modalInfluencer: false
+    modalInfluencer: false,
+    showMsg: false
 }

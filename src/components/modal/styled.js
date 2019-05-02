@@ -85,7 +85,35 @@ export const Value = styled.div`
     opacity: 0.65;
 `;
 
-export const ButtonContact = styled.a`
-    
+export const BoxButton = styled.div`
+    width: 100%;
+    display: block;
+    border-top: 1px solid rgba(34,34,34,0.21);
+    padding-top: 10px;
+    margin-top: 10px;
+    text-align: center;
 `;
 
+export const ButtonContact = styled.button`
+    background: #222;
+    color: #FFF;
+    padding: 10px 30px 12px;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 300;
+    outline: none;
+
+    &:hover{
+        opacity: 0.4;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+`;
+
+export const MessageModal = styled.div`
+    text-align: center;
+`;
