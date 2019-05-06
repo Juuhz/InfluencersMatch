@@ -9,7 +9,7 @@ import {
 const Header = () => (
     <Section id="header">
         <Container>
-            <Title>Encontre os influenciadores <br />certos para a sua campanha.</Title>
+            <Title>Encontre seu criador de conteúdo.</Title>
         </Container>
     </Section>
 );

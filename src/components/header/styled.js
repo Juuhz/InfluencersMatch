@@ -15,6 +15,6 @@ export const Title = styled.h1`
     z-index: 2;
     font-size: 55px;
     font-weight: 100;
-    margin-top: 90px;
+    margin-top: 130px;
     display: inline-block;
 `;
