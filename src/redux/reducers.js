@@ -24,11 +24,16 @@ export const reducer = (state = initialState, action) => {
       return Object.assign({}, state, {
         modalInfluencer: false,
         modalStatus: false,
-        showMsg: false
+        showMsg: false,
+        showMsgEmail: false
       })
-    case actionTypes.MESSAGE_MODAL:
+      case actionTypes.MESSAGE_MODAL:
       return Object.assign({}, state, {
         showMsg: true
+      })
+      case actionTypes.MESSAGE_MODAL_EMAIL:
+      return Object.assign({}, state, {
+        showMsgEmail: true
       })
     default:
       return state

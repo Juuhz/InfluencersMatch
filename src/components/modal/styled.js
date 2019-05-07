@@ -104,6 +104,8 @@ export const ButtonContact = styled.button`
     cursor: pointer;
     font-weight: 300;
     outline: none;
+    margin: 15px auto 0;
+    display: block;
 
     &:hover{
         opacity: 0.4;
@@ -116,4 +118,14 @@ export const ButtonContact = styled.button`
 
 export const MessageModal = styled.div`
     text-align: center;
+`;
+
+export const FieldEmail = styled.input`
+    width: 100%;
+    border: 1px solid #222;
+    border-radius: 4px;
+    padding: 10px 15px;
+    margin-top: 20px;
+    color: #222;
+    font-size: 14px;
 `;

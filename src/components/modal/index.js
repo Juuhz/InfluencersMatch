@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 // Import Actions Redux
-import { closeModal, showContactModal } from '../../redux/actions';
+import { closeModal, showContactModal, showMsgModal } from '../../redux/actions';
 
 // Import Utils
 import ReactStars from 'react-stars';
@@ -14,7 +14,7 @@ import {
     ModalWrapper, ModalContent, CloseModal,
     Thumbinial, Infos, Name, Stars, InfoStar,
     InstaStats, ItemStats, Label, Value, BoxButton, ButtonContact,
-    MessageModal
+    MessageModal, FieldEmail
 } from './styled';
 
 class Modal extends Component {
@@ -31,9 +31,30 @@ class Modal extends Component {
         showContactModal();
     }
 
+    // Evento para enviar e-mail
+    sendEmail = async ( form ) => {
+        form.preventDefault();
+
+        const { showMsgModal } = this.props;
+
+        // E-mail
+        const email = this.refs.email.value;
+
+        await fetch( `/mailchimp?email=${email}`, {
+            mode: 'cors',
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                'Access-Control-Allow-Origin': '*'
+            }
+        });
+
+        showMsgModal();
+    }
+
     render() {
         const influence = this.props.modalInfluencer;
-        const { showMsg } = this.props;
+        const { showMsg, showMsgEmail } = this.props;
 
         return (
             <ModalWrapper id="modal">
@@ -83,7 +104,21 @@ class Modal extends Component {
                                 </BoxButton>
                             </div>
                         ) : (
-                            <MessageModal>Estamos finalizando o desenvolvimento do nosso produto, aguarde.</MessageModal>
+                            <div>
+                                {
+                                    !showMsgEmail ? (
+                                        <div>
+                                            <MessageModal>Esta funcionalidade estará disponível em breve. <br />Deixe seu e-mail para ser avisado:</MessageModal>
+                                            <form onSubmit={this.sendEmail}>
+                                                <FieldEmail type="e-mail" name="email" id="email" ref="email" placeholder="Insira seu e-mail" />
+                                                <ButtonContact>Enviar e-mail</ButtonContact>
+                                            </form>
+                                        </div>
+                                    ) : (
+                                        <MessageModal>E-mail cadastrado com sucesso.</MessageModal>
+                                    )
+                                }
+                            </div>
                         )
                     }
                 </ModalContent>
@@ -93,11 +128,11 @@ class Modal extends Component {
 }
 
 function mapStateToProps ( state ) {
-    const { modalInfluencer, showMsg } = state;
-    return { modalInfluencer, showMsg }
+    const { modalInfluencer, showMsg, showMsgEmail } = state;
+    return { modalInfluencer, showMsg, showMsgEmail }
 }
 
-const mapDispatchToProps = dispatch => bindActionCreators({ closeModal, showContactModal }, dispatch)
+const mapDispatchToProps = dispatch => bindActionCreators({ closeModal, showContactModal, showMsgModal }, dispatch)
 
 export default connect(
     mapStateToProps,
